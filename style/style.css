@@ -1,0 +1,195 @@
+/*
+
+Globals
+
+*/
+
+body{
+	font-size: 100%;
+
+	font-family: 'Ubuntu Mono', sans-serif;
+	/* margin: 0; */
+	/* padding: 0; */
+}
+a{
+	color: #000;
+	text-decoration: none;
+}
+/*
+
+Header Styling
+
+*/
+
+header{
+	position: fixed;
+
+	width: 100vw;
+
+	background-color: #fff;
+}
+h1{
+	float: left;
+
+	margin: 0;
+	padding: 1em 0 0 1em;	
+	font-size: 1.2em;
+}
+header img{
+	padding-top: 1.8em;
+	float: left;
+}
+header nav ul{
+	float:right;
+
+	display: none;
+	margin: 0 2em;
+	padding: 1em;
+
+	background: #fff;
+}
+header nav ul li{
+	display: block;
+	list-style: none;
+}
+header nav ul li:hover{
+	background: #000;
+}
+header a{
+	display: block;
+	padding: .2em;
+	font-size: 1.2em;
+}
+header a:hover{
+	color: #fff;
+}
+.container{
+	/* padding: 0; */
+}
+.nav-toggle{
+	padding: 1em;
+	float: right;
+
+	position: relative;
+	font-size: 1.2em;
+	left: -2em;
+	cursor: pointer;
+}
+input[type=checkbox]{
+	display:none;
+}
+input[type=checkbox]:checked ~ nav ul{
+	display: block;
+}
+
+/*
+
+Main Styling
+
+*/
+
+article:first-child{
+	color: #fff;
+	text-shadow: 1px 1px 5px hsl(0, 0%, 0%);
+	background: url(http://lorempixel.com/g/1920/1280/animals/6/);
+	background-position: 75%;
+
+	min-height: 100vh;
+	height:auto;
+	padding: 3em 0 0 0;
+}
+article:first-child>*{
+	margin: 1em;
+}
+article:not(:first-child) {
+    padding: 1em;
+}
+.more_link{
+	float:right;
+	text-decoration: none;
+}
+figure{
+	margin:0;
+}
+figure img{
+	max-width: 100%;
+	height: auto;
+}
+figure figcaption{
+	color:dimgray;
+}
+
+/*
+
+Footer Styling
+
+*/
+
+footer{
+	position:fixed;
+	bottom:0;
+	/* left:0; */
+
+	width:100%;
+	
+	text-align: center;
+	background-color: hsl(0, 0%, 95%);
+}
+/*
+
+If the viewport is larger then 800px then add this css
+
+*/
+@media screen and (min-width: 800px) {
+	.nav-toggle{
+		display: none;
+	}
+	header nav ul{
+		display: inline-block;	
+	
+		float: left;
+}
+	header nav ul li{
+		display: inline;
+	}
+	header nav ul li:hover{
+		background: #fff;
+	}
+	header a:hover{
+		color: #000;
+	}
+	header nav ul li a{
+		display: inline;
+		padding: 1em;;
+	}
+	header nav ul li a:hover{
+		padding-bottom: .5em;
+		border-bottom: hsl(0, 0%, 0%) 0.2em solid;
+	}
+	.container{
+		/* width: 100%; */
+		/* padding-right: 0; */
+		/* padding-left: 0; */
+		/* margin-right: auto; */
+		/* margin-left: auto; */
+	}
+	article:first-child{
+		width: 100%;
+		background-color:black;
+		background-position: 60%;
+	}
+	article{
+		width: calc(50% - 2em);
+		float: left;
+	}
+}
+@media screen and (min-width: 800px) and (max-width: 1150){
+	article:nth-child(even):not(:first-child){
+		clear:both;
+	}
+}
+@media screen and (min-width: 1150px){
+	article{
+		width: calc(33% - 2em);
+	}
+}
