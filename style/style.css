@@ -45,8 +45,8 @@ header nav ul{
 	float:right;
 
 	display: none;
-	margin: 0 2em;
-	padding: 1em;
+	margin: 0;
+	padding: 1em 2em 1em;
 
 	background: #fff;
 }
@@ -61,6 +61,7 @@ header a{
 	display: block;
 	padding: .2em;
 	font-size: 1em;
+	font-weight: bold;
 }
 header a:hover{
 	color: #fff;
@@ -73,6 +74,9 @@ header a:hover{
 	font-size: 1.2em;
 	left: -2em;
 	cursor: pointer;
+}
+#line_1:hover, #line_2:hover, #line_3:hover{
+	stroke: #f00;
 }
 input[type=checkbox]{
 	display:none;
