@@ -9,7 +9,8 @@ body{
 
 	font-family: 'Ubuntu Mono', sans-serif;
 	margin: 0; 
-	padding: 0; 
+	padding: 0;
+	line-height: 1;
 }
 a{
 	color: #000;
@@ -27,13 +28,14 @@ header{
 	width: 100vw;
 
 	background-color: #fff;
+	font-size:1em;
 }
 h1{
 	float: left;
 
 	margin: 0;
-	padding: 1em 0 0 1em;	
-	font-size: 1.2em;
+	padding: 1em 0 1em 1em;	
+	font-size: 1em;
 }
 header img{
 	padding-top: 1.8em;
@@ -58,13 +60,13 @@ header nav ul li:hover{
 header a{
 	display: block;
 	padding: .2em;
-	font-size: 1.2em;
+	font-size: 1em;
 }
 header a:hover{
 	color: #fff;
 }
 .nav-toggle{
-	padding: 1em;
+	padding: .5em;
 	float: right;
 
 	position: relative;
