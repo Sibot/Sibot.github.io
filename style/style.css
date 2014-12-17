@@ -8,8 +8,8 @@ body{
 	font-size: 100%;
 
 	font-family: 'Ubuntu Mono', sans-serif;
-	 margin: 0; 
-	 padding: 0; 
+	margin: 0; 
+	padding: 0; 
 }
 a{
 	color: #000;
@@ -86,14 +86,17 @@ Main Styling
 */
 
 article:first-child{
-	color: #fff;
-	text-shadow: 1px 1px 5px hsl(0, 0%, 0%);
-	background: url(http://lorempixel.com/g/1920/1280/animals/6/);
-	background-position: 75%;
-
 	min-height: 100vh;
 	height:auto;
 	padding: 3em 0 0 0;
+
+	color: #fff;
+	text-shadow: 1px 1px 5px hsl(0, 0%, 0%);
+	background:radial-gradient(
+		ellipse farthest-side at top,
+		hsl(320, 7%, 42%) 0,
+		hsl(330, 9%, 22%) 100%);
+	background-color:black;
 }
 article:first-child>*{
 	margin: 1em;
@@ -105,15 +108,55 @@ article:not(:first-child) {
 	float:right;
 	text-decoration: none;
 }
+.fill{
+	width:100vw;
+	height: 100vh;
+}
+.parallax{
+	-webkit-perspective: 1px;
+	-moz-perspective: 1px;
+	-ms-perspective: 1px;
+	perspective: 1px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+.parallax_layer{
+	padding:100vh 0;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left:0;
+}
+.first{
+	-webkit-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-o-transform: translateZ(0);
+	transform: translateZ(0);
+	background: radial-gradient(
+		ellipse farthest-side at top,
+		hsl(320, 7%, 42%) 0,
+		hsl(330, 9%, 22%) 100%);
+}
+.second{
+	-webkit-transform: translateZ(-2px);
+	-ms-transform: translateZ(-2px);
+	-o-transform: translateZ(-2px);
+	transform: translateZ(-2px);
+	background:radial-gradient(
+		ellipse farthest-side at top,
+		hsl(320, 7%, 42%) 0,
+		hsl(330, 9%, 22%) 100%);
+}
 figure{
-	margin:0;
+	margin: 0;
 }
 figure img{
 	max-width: 100%;
 	height: auto;
 }
 figure figcaption{
-	color:dimgray;
+	color: gray;
 }
 
 /*
@@ -165,7 +208,7 @@ If the viewport is larger then 800px then add this css
 	}
 	article:first-child{
 		width: 100%;
-		background-color:black;
+
 		background-position: 60%;
 	}
 	article{
