@@ -81,7 +81,7 @@ article {
     text-shadow: 1px 1px 5px black;
     background: radial-gradient(ellipse farthest-side at top, #73646e 0, #3d3338 100%);
     background-color: black; }
-  article * {
+  article > * {
     margin: 1em; }
 
 .more_link {
