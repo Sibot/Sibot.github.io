@@ -29,6 +29,7 @@ header{
 
   background-color: #fff;
   font-size:1em;
+  box-shadow: 0 0 1em 0 black;
   nav ul{
     float:right;
 
@@ -90,7 +91,7 @@ Main Styling
 article{
     padding: 1em;
   &:first-child{
-    min-height: 100vh;
+    min-height: calc(100vh - 4em);
     height:auto;
     padding: 3em 0 0 0;
 
@@ -98,13 +99,20 @@ article{
     text-shadow: 1px 1px 5px hsl(0, 0%, 0%);
     background:radial-gradient(
       ellipse farthest-side at top,
-      hsl(320, 7%, 42%) 0,
+      hsl(321, 53%, 51%) 0,
       hsl(330, 9%, 22%) 100%);
     background-color:black;
   }
   &>*{
     margin: 1em;
   }
+  section{
+    text-transform: justify;
+  }
+}
+.published, .modified, .author{
+  font-size: .8em;
+  display:block;
 }
 .more_link{
   float:right;
@@ -135,6 +143,7 @@ footer{
   
   text-align: center;
   background-color: hsl(0, 0%, 95%);
+  box-shadow: 0 0 1em -1em black; 
 }
 /*
 

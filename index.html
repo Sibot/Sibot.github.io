@@ -37,33 +37,56 @@
 	<main>
 		<article>
 			<h2>MFRWD</h2>
-			<h3>mobile first responsive web design</h3>
-			<h4>What is it?</h4>
-			<p>Chosing to follow a mobile first approach makes you design for a mobile view first and then adapt the design for larger viewports in media queries rather then the opposite.</p>
-			<p>Responsive on the other hand is a uniform design that adapts to the viewport.</p>
-			<p>Combined they make a more easily maintained code base.</p>
-			<h4>Features of this design</h4>
-			<ul>
-				<li>An easy to generate HTML markup for backend generated content.</li>
-				<li>First article becomes fullscreen for easy promotion </li>
-				<li>CSS only menu for medium to small viewports.</li>
-				<li>Fixed top bar with logo and menu</li>
-				<li>Optional fixed footer</li>
-				<li>Dual and tripple column layout at larger viewports</li>
-				<li>images auto resize to layout width</li>
-			</ul>
-			<p>I started writing this design as a trial and error learning to make something not terrible. This is the third itteration of the same basic design. A fixed responsive top menu and a fixed bottom footer. There are plenty of ways to do this, both CSS and JavaScript based. I wanted a CSS-only base design and add JavaScript only if necessary.</p><p> 
-			When I liked the menu I started working on a full screen article and researching the "vw" and "vh" units. It seems support is a bit wobbly still, even my IDE Sublime Text 2 doesn't know what it is. </p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro distinctio voluptates provident quibusdam fugiat amet corporis sint voluptate hic harum rerum error voluptatum odit, recusandae, nisi magni minus sed et delectus adipisci aliquid sit laborum omnis placeat. Itaque, dicta fugiat laudantium et sint nulla ducimus atque sequi animi, debitis sunt vitae ullam quaerat ad, mollitia autem quis commodi quasi non similique aperiam vero aspernatur blanditiis! Debitis magnam atque, reprehenderit repudiandae eius corporis, impedit qui. Eveniet laudantium, ad velit ut fugit architecto sint facere corporis veniam, fugiat nemo, consequatur quia cum sequi. Nam ut nihil eum repellat obcaecati esse magnam libero voluptas a inventore sapiente nemo neque repellendus alias natus quidem, iste sequi numquam illum ipsum suscipit totam deleniti, quis. Quidem soluta enim vitae numquam dolorum ab at et, culpa eaque repellendus illum sit rerum inventore ipsam, deserunt mollitia distinctio magni praesentium odit consequuntur saepe laboriosam facere pariatur. Quaerat, atque laboriosam?</p>
+			<p><small>
+				<span class="published">Published: <datetime datetime="2014-12-05 10:33:15"> 2014-12-18 10:33:15</datetime></span>
+				<span class="modified"> Modified: <datetime datetime="2014-12-20 20:12:00">2014-12-20 20:12:00</datetime></span>
+				<span class="author">Written by: Tobias Axelsson</span>
+			</small></p>
+			<section>
+				<h3>mobile first responsive web design</h3>
+				<h4>What is it?</h4>
+				<p>Chosing to follow a mobile first approach makes you design for a mobile view first and then adapt the design for larger viewports in media queries rather then the opposite.</p>
+				<p>Responsive on the other hand is a uniform design that adapts to the viewport.</p>
+				<p>Combined they make a more easily maintained code base.</p>
+				<h4>Features of this design</h4>
+				<ul>
+					<li>An easy to generate HTML markup for backend generated content.</li>
+					<li>First article becomes fullscreen for easy promotion </li>
+					<li>CSS only menu for medium to small viewports.</li>
+					<li>Fixed top bar with logo and menu</li>
+					<li>Optional fixed footer</li>
+					<li>Dual and tripple column layout at larger viewports</li>
+					<li>images auto resize to layout width</li>
+				</ul>
+				<p>I started writing this design as a trial and error learning to make something not terrible. This is the third iteration of the same design, the other two failed. A fixed responsive top menu and bottom footer. I wanted a CSS-only base design and add JavaScript only if necessary in order to properly learn the ins and outs of responsive CSS through media queries and relative units.</p>
+				<p> When I was happy with the menu I started working on a full screen responsive article and researching the "vw" and "vh" units. It seems support is a bit wobbly still, even my IDE Sublime Text 2 doesn't know what it is. </p>
+				<p>With a full screen responsive article and menu I continued making a responsive collection of older articles. Low resolution yields one column, higher shows two and higher still gives you three columns. Im pretty happy with this layout. Now to make some content for it... </p>
+			</section>
 		</article>
 		<article>
 			<h2>Wordpress integration.</h2>
-			<p>Say what you like about wordpress. I think it is a good enough place to write your blog on. What if you could write your posts on Wordpress and then have then show up on your site as they are published? </p>
+			<p><small>
+				<span class="published">Published: <datetime datetime="2014-12-05 10:33:15"> 2014-12-18 10:33:15</datetime></span>
+				<span class="modified"> Modified: <datetime datetime="2014-12-20 20:12:00">2014-12-20 20:12:00</datetime></span>
+				<span class="author">Written by: Tobias Axelsson</span>
+			</small></p>
+			<section>
+				<p>Say what you like about wordpress. I think it is a good enough place to write your blog on. What if you could write your posts on Wordpress and then have then show up on your site as they are published? </p>
 				<p>Lets see if we can do this.
 				Wordpress apperently has an API for accessing posts of a particular site/author/blog/whatnot. I write my posts on the site: https://fend14tobis.wordpress.com
-				You can access a post from this collection like so: <pre><a href="https://public-api.wordpress.com/rest/v1/sites/fend14tobis.wordpress.com/posts/">https://public-api.wordpress.com/rest/v1/sites/fend14tobis.wordpress.com/posts/?number=1&pretty=1</a></pre>
-				<p>Making a request for  this data gives a collection of my posts in JSON-format. More to read here: <a href="https://developer.wordpress.com/docs/api/">https://developer.wordpress.com/docs/api/</a>Displaying it on another site will require either JavaScript for clientside access or serverside scripting like PHP or .NET. I'm gonna opt for JavaScript just for fun. There are a number of complications to this choice but it's all for the learning process.</p><p>
-			</p>
+				You can access a post from this collection like so: <pre><a href="https://public-api.wordpress.com/rest/v1/sites/fend14tobis.wordpress.com/posts/">https://public-api.wordpress.com/rest/v1/sites/fend14tobis.wordpress.com/posts/</a></pre>
+				<p>Making a request for this data gives a collection of my posts in JSON-format. More to read here: <a href="https://developer.wordpress.com/docs/api/">https://developer.wordpress.com/docs/api/</a>. Displaying it on another site will require either JavaScript for clientside access or serverside scripting like PHP or .NET. I'm gonna opt for JavaScript just for fun. There are a number of complications to this choice but it's all for the learning process.</p>
+				<ul>
+					<li>Disabled JavaScript will not fetch content</li>
+					<li>Network may prove unreliable to fetch content</li>
+					<li>The content will not load untill the browser has parsed the script.</li>
+					<li>Constructing the elements in Javascript is not fun.</li>
+					<li>JavaScript should enhance content viewing, not allow content viewing.</li>
+				</ul>
+				<p>
+					Let&apos;s not think about those points. A request to the API is just an xhr away. Parse the response and construct the elements to contain the data. Add the elements to the DOM and we&apos;re done.
+				</p>
+			</section>
 			<p><a href="" class="more_link">Read more...</a></p>
 		</article>
 

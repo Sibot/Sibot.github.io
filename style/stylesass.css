@@ -23,7 +23,8 @@ header {
   position: fixed;
   width: 100vw;
   background-color: #fff;
-  font-size: 1em; }
+  font-size: 1em;
+  box-shadow: 0 0 1em 0 black; }
   header nav ul {
     float: right;
     display: none;
@@ -74,15 +75,21 @@ Main Styling
 article {
   padding: 1em; }
   article:first-child {
-    min-height: 100vh;
+    min-height: calc(100vh - 4em);
     height: auto;
     padding: 3em 0 0 0;
     color: #fff;
     text-shadow: 1px 1px 5px black;
-    background: radial-gradient(ellipse farthest-side at top, #73646e 0, #3d3338 100%);
+    background: radial-gradient(ellipse farthest-side at top, #c44096 0, #3d3338 100%);
     background-color: black; }
   article > * {
     margin: 1em; }
+  article section {
+    text-transform: justify; }
+
+.published, .modified, .author {
+  font-size: .8em;
+  display: block; }
 
 .more_link {
   float: right;
@@ -106,7 +113,8 @@ footer {
   bottom: 0;
   width: 100%;
   text-align: center;
-  background-color: #f2f2f2; }
+  background-color: #f2f2f2;
+  box-shadow: 0em 0em 1em 0em hsl(0, 0%, 0%); }
 
 /*
 
